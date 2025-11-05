@@ -1,0 +1,22 @@
+{
+  "name": "free-ai-agents",
+  "version": "1.0.0",
+  "description": "A website collating the best free AI agents and coding assistants",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "free",
+    "coding",
+    "tools"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Agents - Best Deals & Offers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            min-width: 300px;
+        }
+
+        .search-bar input {
+            background: none;
+            border: none;
+            color: white;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-free { background: #10b981; color: white; }
+        .badge-trial { background: #f59e0b; color: white; }
+        .badge-freemium { background: #3b82f6; color: white; }
+        .badge-limited { background: #ef4444; color: white; }
+
+        .card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .tags {
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin: 2px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .card-actions .btn {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+
+        .filters {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-section h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .info-section p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+            margin: 2% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .close:hover {
+            color: #333;
+        }
+
+        .agent-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .features, .limitations {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .features h4 {
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+
+        .limitations h4 {
+            color: #f59e0b;
+            margin-bottom: 1rem;
+        }
+
+        .features ul, .limitations ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li, .limitations li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+
+        .limitations li::before {
+            content: "⚠";
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .search-bar {
+                min-width: 100%;
+            }
+            
+            .agent-detail {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">🤖 Free AI Agents</a>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search AI agents...">
+                    <span>🔍</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" onclick="showHome()">Home</a>
+                    <a href="#" onclick="showAllAgents()">All Agents</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="content">
+            <!-- Content will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <div id="agentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        let agents = [];
+        let currentView = 'home';
+
+        // Load agents data
+        fetch('/api/agents')
+            .then(response => response.json())
+            .then(data => {
+                agents = data;
+                showHome();
+            })
+            .catch(error => {
+                console.error('Error loading agents:', error);
+                document.getElementById('content').innerHTML = '<p>Error loading data. Please refresh the page.</p>';
+            });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            if (currentView === 'all') {
+                displayAgents(agents.filter(agent => 
+                    agent.name.toLowerCase().includes(searchTerm) ||
+                    agent.description.toLowerCase().includes(searchTerm) ||
+                    agent.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                ));
+            }
+        });
+
+        function showHome() {
+            currentView = 'home';
+            const featuredAgents = agents
+                .filter(agent => agent.pricingType === 'free' || agent.pricingType === 'freemium')
+                .slice(0, 3);
+
+            const content = `
+                <div class="hero">
+                    <h1>Free AI Agents</h1>
+                    <p>Discover the best free AI agents and coding assistants. From OpenCode + Grok to unlimited trials, find the perfect AI tool for your needs without breaking the bank.</p>
+                    <a href="#" class="btn" onclick="showAllAgents()">Explore All Agents</a>
+                </div>
+
+                <h2 class="section-title">🌟 Featured Free Agents</h2>
+                <div class="grid">
+                    ${featuredAgents.map(agent => createAgentCard(agent)).join('')}
+                </div>
+
+                <h2 class="section-title">💡 Why Choose Free AI Agents?</h2>
+                <div class="grid">
+                    <div class="info-section">
+                        <h3>💰 Cost Effective</h3>
+                        <p>Get powerful AI assistance without monthly subscriptions. Perfect for students, hobbyists, and developers on a budget.</p>
+                    </div>
+                    <div class="info-section">
+                        <h3>🚀 Try Before You Buy</h3>
+                        <p>Test premium features through free trials and freemium plans before committing to a paid subscription.</p>
+                    </div>
+                    <div class="info-section">
+                        <h3>🛠️ No Commitment</h3>
+                        <p>Switch between different AI tools easily without being locked into contracts or long-term commitments.</p>
+                    </div>
+                </div>
+
+                <div class="hero">
+                    <h2>Ready to boost your productivity?</h2>
+                    <p>Explore our curated list of free AI agents and find the perfect tool for your needs.</p>
+                    <a href="#" class="btn" onclick="showAllAgents()">Browse All Agents</a>
+                </div>
+            `;
+            
+            document.getElementById('content').innerHTML = content;
+        }
+
+        function showAllAgents() {
+            currentView = 'all';
+            const content = `
+                <h1 class="section-title">🤖 All Free AI Agents</h1>
+                
+                <div class="filters">
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label for="categoryFilter">Category</label>
+                            <select id="categoryFilter" onchange="filterAgents()">
+                                <option value="all">All Categories</option>
+                                <option value="coding">Coding</option>
+                                <option value="general">General</option>
+                                <option value="research">Research</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="pricingFilter">Pricing Type</label>
+                            <select id="pricingFilter" onchange="filterAgents()">
+                                <option value="all">All Types</option>
+                                <option value="free">Free</option>
+                                <option value="freemium">Freemium</option>
+                                <option value="trial">Trial</option>
+                                <option value="limited">Limited</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="text-align: center; color: #666;">
+                        Found <span id="agentCount">${agents.length}</span> agents
+                    </div>
+                </div>
+
+                <div class="grid" id="agentsGrid">
+                    ${agents.map(agent => createAgentCard(agent)).join('')}
+                </div>
+            `;
+            
+            document.getElementById('content').innerHTML = content;
+        }
+
+        function createAgentCard(agent) {
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>${agent.name}</h3>
+                            <span class="badge badge-${agent.pricingType}">${agent.pricingType}</span>
+                        </div>
+                    </div>
+                    <p>${agent.description}</p>
+                    <div class="tags">
+                        ${agent.tags.slice(0, 4).map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn" onclick="showAgentDetail('${agent.id}')">View Details</a>
+                        <a href="${agent.url}" target="_blank" class="btn btn-secondary">Visit Site</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterAgents() {
+            const category = document.getElementById('categoryFilter').value;
+            const pricing = document.getElementById('pricingFilter').value;
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            let filtered = agents;
+
+            if (category !== 'all') {
+                filtered = filtered.filter(agent => agent.category === category);
+            }
+
+            if (pricing !== 'all') {
+                filtered = filtered.filter(agent => agent.pricingType === pricing);
+            }
+
+            if (searchTerm) {
+                filtered = filtered.filter(agent => 
+                    agent.name.toLowerCase().includes(searchTerm) ||
+                    agent.description.toLowerCase().includes(searchTerm) ||
+                    agent.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                );
+            }
+
+            document.getElementById('agentCount').textContent = filtered.length;
+            document.getElementById('agentsGrid').innerHTML = filtered.map(agent => createAgentCard(agent)).join('');
+        }
+
+        function showAgentDetail(agentId) {
+            const agent = agents.find(a => a.id === agentId);
+            if (!agent) return;
+
+            const modalContent = `
+                <h1>${agent.name}</h1>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 1rem;">${agent.description}</p>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <span class="badge badge-${agent.pricingType}">${agent.pricingType.toUpperCase()}</span>
+                    <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 4px 12px; border-radius: 20px; font-size: 12px;">
+                        ${agent.category}
+                    </span>
+                    <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 4px 12px; border-radius: 20px; font-size: 12px;">
+                        Popularity: ${agent.popularity}/100
+                    </span>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3>Tags</h3>
+                    <div>
+                        ${agent.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+
+                <div class="agent-detail">
+                    <div class="features">
+                        <h4>✅ Features</h4>
+                        <ul>
+                            ${agent.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="limitations">
+                        <h4>⚠️ Limitations</h4>
+                        <ul>
+                            ${agent.limitations.map(limitation => `<li>${limitation}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3>💡 How to Get Started</h3>
+                    <p style="color: #666; line-height: 1.6;">
+                        ${getStartedText(agent.pricingType)}
+                    </p>
+                </div>
+
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="${agent.url}" target="_blank" class="btn">Visit Website</a>
+                </div>
+            `;
+
+            document.getElementById('modalContent').innerHTML = modalContent;
+            document.getElementById('agentModal').style.display = 'block';
+        }
+
+        function getStartedText(pricingType) {
+            switch(pricingType) {
+                case 'free':
+                    return 'This agent is completely free to use! Simply visit their website and start using it immediately. No registration or credit card required.';
+                case 'freemium':
+                    return 'Sign up for a free account to access basic features. You can upgrade to a paid plan if you need more advanced features or higher usage limits.';
+                case 'trial':
+                    return 'Start with a free trial to test all premium features. You\'ll need to provide payment information, but you won\'t be charged until the trial period ends.';
+                case 'limited':
+                    return 'This service offers limited free access with certain restrictions. Perfect for trying out the service or for light usage.';
+                default:
+                    return 'Visit their website to get started with this AI agent.';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('agentModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('agentModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

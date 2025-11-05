@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Agents - Best Deals & Offers</title>
+    <meta name="description" content="Discover the best free AI agents and coding assistants. From OpenCode + Grok to unlimited trials, find the perfect AI tool for your needs without breaking the bank.">
+    <meta name="keywords" content="free AI agents, coding assistants, OpenCode, Grok, Big Pickle, AI tools, free trials">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-light: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar:focus-within {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            background: none;
+            border: none;
+            color: white;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-icon {
+            color: rgba(255, 255, 255, 0.8);
+            margin-left: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        /* Section Headers */
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            text-align: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-gradient);
+            border-radius: 2px;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            flex: 1;
+        }
+
+        /* Badges */
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .badge-free { background: linear-gradient(135deg, #10b981, #059669); color: white; }
+        .badge-trial { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+        .badge-freemium { background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; }
+        .badge-limited { background: linear-gradient(135deg, #ef4444, #dc2626); color: white; }
+
+        .badge-category {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            margin-left: 0.5rem;
+        }
+
+        /* Card Content */
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .popularity {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .popularity-bar {
+            width: 50px;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .popularity-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ef4444, #f59e0b, #10b981);
+            transition: width 0.3s ease;
+        }
+
+        /* Tags */
+        .tags {
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin: 2px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        /* Card Actions */
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .card-actions .btn {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Filters */
+        .filters {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .filter-group select,
+        .filter-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .filter-stats {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Info Sections */
+        .info-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .info-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-section h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .info-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 2% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close:hover {
+            color: var(--text-primary);
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Agent Detail */
+        .agent-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .features, .limitations {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .features h4 {
+            color: #10b981;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .limitations h4 {
+            color: #f59e0b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features ul, .limitations ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li, .limitations li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .limitations li::before {
+            content: "⚠";
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid var(--glass-border);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .search-container {
+                max-width: 100%;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .agent-detail {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card-actions {
+                flex-direction: column;
+            }
+            
+            .hero {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Fade in animation */
+        .fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">🤖 Free AI Agents</a>
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search AI agents by name, description, or tags...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#agents">All Agents</a>
+                    <a href="#about">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h1>Free AI Agents</h1>
+            <p>Discover the best free AI agents and coding assistants. From OpenCode + Grok to unlimited trials, find the perfect AI tool for your needs without breaking the bank.</p>
+            <a href="#agents" class="btn">Explore All Agents</a>
+        </section>
+
+        <!-- Featured Agents -->
+        <section id="featured">
+            <h2 class="section-title">🌟 Featured Free Agents</h2>
+            <div class="grid" id="featuredGrid">
+                <!-- Featured agents will be inserted here -->
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section id="why-choose">
+            <h2 class="section-title">💡 Why Choose Free AI Agents?</h2>
+            <div class="grid">
+                <div class="info-section">
+                    <h3>💰 Cost Effective</h3>
+                    <p>Get powerful AI assistance without monthly subscriptions. Perfect for students, hobbyists, and developers on a budget.</p>
+                </div>
+                <div class="info-section">
+                    <h3>🚀 Try Before You Buy</h3>
+                    <p>Test premium features through free trials and freemium plans before committing to a paid subscription.</p>
+                </div>
+                <div class="info-section">
+                    <h3>🛠️ No Commitment</h3>
+                    <p>Switch between different AI tools easily without being locked into contracts or long-term commitments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Agents Section -->
+        <section id="agents">
+            <h2 class="section-title">🤖 All Free AI Agents</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="coding">Coding</option>
+                            <option value="general">General</option>
+                            <option value="research">Research</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="pricingFilter">Pricing Type</label>
+                        <select id="pricingFilter">
+                            <option value="all">All Types</option>
+                            <option value="free">Completely Free</option>
+                            <option value="freemium">Freemium</option>
+                            <option value="trial">Free Trial</option>
+                            <option value="limited">Limited Free</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortBy">Sort By</label>
+                        <select id="sortBy">
+                            <option value="popularity">Popularity</option>
+                            <option value="name">Name</option>
+                            <option value="updated">Last Updated</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-stats">
+                    Found <span id="agentCount">0</span> agents
+                </div>
+            </div>
+
+            <!-- Agents Grid -->
+            <div class="grid" id="agentsGrid">
+                <!-- All agents will be inserted here -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">📖 About This Project</h2>
+            <div class="info-section">
+                <h3>Our Mission</h3>
+                <p>This website serves as a curated directory of the best free AI agents and coding assistants available today. We believe that powerful AI tools should be accessible to everyone, regardless of their budget.</p>
+                
+                <h3>What We Include</h3>
+                <p>We carefully evaluate and include AI agents that offer genuine value for free. This includes completely free tools, freemium services with generous free tiers, trial periods, and limited free offerings that are still useful.</p>
+                
+                <h3>Stay Updated</h3>
+                <p>The AI landscape changes rapidly. We regularly update our listings to ensure you have access to the latest free AI tools and offers. Last updated: November 2024</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#agents?category=coding">Coding Assistants</a></li>
+                        <li><a href="#agents?category=general">General AI</a></li>
+                        <li><a href="#agents?category=research">Research Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Pricing Types</h4>
+                    <ul>
+                        <li><a href="#agents?pricing=free">Completely Free</a></li>
+                        <li><a href="#agents?pricing=freemium">Freemium</a></li>
+                        <li><a href="#agents?pricing=trial">Free Trials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Popular Tools</h4>
+                    <ul>
+                        <li><a href="#agent-opencode-grok">OpenCode + Grok</a></li>
+                        <li><a href="#agent-big-pickle">Big Pickle</a></li>
+                        <li><a href="#agent-chatgpt-free">ChatGPT Free</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com">GitHub</a></li>
+                        <li><a href="mailto:contact@example.com">Contact</a></li>
+                        <li><a href="#about">About This Project</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2024 Free AI Agents. Built with ❤️ for the developer community.</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">
+                    This is a community-driven project. AI offerings may change - always verify current terms before use.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Agent Details -->
+    <div id="agentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // AI Agents Data
+        const agents = [
+            {
+                id: 'opencode-grok',
+                name: 'OpenCode + Grok',
+                description: 'Free coding agent through OpenCode CLI with Grok integration',
+                category: 'coding',
+                pricingType: 'free',
+                features: [
+                    'Code generation and completion',
+                    'Debugging assistance',
+                    'File operations and project management',
+                    'Integration with multiple LLMs',
+                    'Terminal-based workflow'
+                ],
+                limitations: [
+                    'Requires command line usage',
+                    'Limited to development tasks',
+                    'Dependent on Grok availability'
+                ],
+                url: 'https://opencode.ai',
+                tags: ['coding', 'cli', 'grok', 'free'],
+                lastUpdated: '2024-11-01',
+                popularity: 95
+            },
+            {
+                id: 'big-pickle',
+                name: 'Big Pickle',
+                description: 'Free AI coding assistant with advanced code understanding',
+                category: 'coding',
+                pricingType: 'free',
+                features: [
+                    'Multi-language code support',
+                    'Real-time collaboration',
+                    'Code explanation and documentation',
+                    'Refactoring suggestions',
+                    'No account required'
+                ],
+                limitations: [
+                    'Limited to smaller codebases',
+                    'Occasional rate limiting',
+                    'Beta stage features'
+                ],
+                url: 'https://bigpickle.ai',
+                tags: ['coding', 'collaboration', 'free', 'no-account'],
+                lastUpdated: '2024-10-28',
+                popularity: 78
+            },
+            {
+                id: 'cursor-trial',
+                name: 'Cursor IDE Trial',
+                description: '14-day free trial of Cursor AI-powered IDE',
+                category: 'coding',
+                pricingType: 'trial',
+                features: [
+                    'AI-powered code completion',
+                    'Natural language to code',
+                    'Multi-file editing',
+                    'Integrated debugging',
+                    'VS Code compatibility'
+                ],
+                limitations: [
+                    '14-day trial period',
+                    'Requires credit card',
+                    'Limited to one trial per user'
+                ],
+                url: 'https://cursor.sh',
+                tags: ['coding', 'ide', 'trial', 'ai-editor'],
+                lastUpdated: '2024-11-02',
+                popularity: 92
+            },
+            {
+                id: 'copilot-free',
+                name: 'GitHub Copilot Free Tier',
+                description: 'Limited free tier of GitHub Copilot for students and open source maintainers',
+                category: 'coding',
+                pricingType: 'freemium',
+                features: [
+                    'Code completion',
+                    'Multi-language support',
+                    'IDE integration',
+                    'Context-aware suggestions'
+                ],
+                limitations: [
+                    'Only available to verified students',
+                    'Open source maintainers only',
+                    'Limited monthly usage'
+                ],
+                url: 'https://github.com/features/copilot',
+                tags: ['coding', 'github', 'students', 'open-source'],
+                lastUpdated: '2024-10-30',
+                popularity: 88
+            },
+            {
+                id: 'claude-free',
+                name: 'Claude Free Tier',
+                description: 'Free tier access to Claude for coding and general tasks',
+                category: 'general',
+                pricingType: 'freemium',
+                features: [
+                    'Advanced reasoning',
+                    'Code generation',
+                    'Long context window',
+                    'Multiple file upload',
+                    'Web browsing capability'
+                ],
+                limitations: [
+                    'Rate limited usage',
+                    'Smaller model than Pro tier',
+                    'No priority during peak times'
+                ],
+                url: 'https://claude.ai',
+                tags: ['general', 'coding', 'anthropic', 'free-tier'],
+                lastUpdated: '2024-11-01',
+                popularity: 94
+            },
+            {
+                id: 'chatgpt-free',
+                name: 'ChatGPT Free',
+                description: 'Free access to GPT-3.5 and limited GPT-4 usage',
+                category: 'general',
+                pricingType: 'freemium',
+                features: [
+                    'General conversation',
+                    'Code generation',
+                    'Problem solving',
+                    'Multiple languages',
+                    'No account required for basic use'
+                ],
+                limitations: [
+                    'GPT-4 access limited',
+                    'Slower response times',
+                    'No file uploads in free tier',
+                    'No custom instructions'
+                ],
+                url: 'https://chat.openai.com',
+                tags: ['general', 'openai', 'gpt', 'free'],
+                lastUpdated: '2024-10-29',
+                popularity: 98
+            },
+            {
+                id: 'perplexity-free',
+                name: 'Perplexity AI Free',
+                description: 'AI-powered search engine with free tier',
+                category: 'research',
+                pricingType: 'freemium',
+                features: [
+                    'Real-time web search',
+                    'Citation generation',
+                    'Research assistance',
+                    'Code examples',
+                    'Academic sources'
+                ],
+                limitations: [
+                    'Limited daily searches',
+                    'Slower response times',
+                    'Basic model only',
+                    'No advanced search filters'
+                ],
+                url: 'https://perplexity.ai',
+                tags: ['research', 'search', 'citations', 'free'],
+                lastUpdated: '2024-10-31',
+                popularity: 82
+            },
+            {
+                id: 'deepseek-coder',
+                name: 'DeepSeek Coder Free',
+                description: 'Free coding-focused AI model from DeepSeek',
+                category: 'coding',
+                pricingType: 'free',
+                features: [
+                    'Specialized for coding tasks',
+                    'Multiple programming languages',
+                    'Code explanation',
+                    'Bug fixing assistance',
+                    'No registration required'
+                ],
+                limitations: [
+                    'Limited to coding tasks',
+                    'Smaller context window',
+                    'Occasional downtime'
+                ],
+                url: 'https://deepseek.com',
+                tags: ['coding', 'deepseek', 'specialized', 'free'],
+                lastUpdated: '2024-11-01',
+                popularity: 75
+            }
+        ];
+
+        // State management
+        let filteredAgents = [...agents];
+        let currentSection = 'home';
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFeaturedAgents();
+            renderAllAgents();
+            setupEventListeners();
+            updateAgentCount();
+        });
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Search functionality
+            document.getElementById('searchInput').addEventListener('input', handleSearch);
+            
+            // Filter functionality
+            document.getElementById('categoryFilter').addEventListener('change', handleFilter);
+            document.getElementById('pricingFilter').addEventListener('change', handleFilter);
+            document.getElementById('sortBy').addEventListener('change', handleSort);
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+            
+            // Modal close on outside click
+            window.addEventListener('click', function(event) {
+                const modal = document.getElementById('agentModal');
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Handle URL parameters
+            handleURLParams();
+        }
+
+        // Handle URL parameters for filtering
+        function handleURLParams() {
+            const params = new URLSearchParams(window.location.search);
+            const category = params.get('category');
+            const pricing = params.get('pricing');
+            
+            if (category) {
+                document.getElementById('categoryFilter').value = category;
+            }
+            if (pricing) {
+                document.getElementById('pricingFilter').value = pricing;
+            }
+            
+            if (category || pricing) {
+                handleFilter();
+                // Scroll to agents section
+                setTimeout(() => {
+                    document.getElementById('agents').scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+
+        // Render featured agents
+        function renderFeaturedAgents() {
+            const featuredAgents = agents
+                .filter(agent => agent.pricingType === 'free' || agent.pricingType === 'freemium')
+                .slice(0, 3);
+            
+            const featuredGrid = document.getElementById('featuredGrid');
+            featuredGrid.innerHTML = featuredAgents.map(agent => createAgentCard(agent)).join('');
+        }
+
+        // Render all agents
+        function renderAllAgents() {
+            const agentsGrid = document.getElementById('agentsGrid');
+            agentsGrid.innerHTML = filteredAgents.map(agent => createAgentCard(agent)).join('');
+        }
+
+        // Create agent card HTML
+        function createAgentCard(agent) {
+            const popularityPercent = (agent.popularity / 100) * 100;
+            
+            return `
+                <div class="card fade-in" id="agent-${agent.id}">
+                    <div class="card-header">
+                        <div>
+                            <h3>${agent.name}</h3>
+                            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                                <span class="badge badge-${agent.pricingType}">${getPricingLabel(agent.pricingType)}</span>
+                                <span class="badge badge-category">${agent.category}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>${agent.description}</p>
+                    <div class="card-meta">
+                        <span>Updated: ${formatDate(agent.lastUpdated)}</span>
+                        <div class="popularity">
+                            <span>Popularity:</span>
+                            <div class="popularity-bar">
+                                <div class="popularity-fill" style="width: ${popularityPercent}%"></div>
+                            </div>
+                            <span>${agent.popularity}%</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        ${agent.tags.slice(0, 4).map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-small" onclick="showAgentDetail('${agent.id}')">View Details</button>
+                        <a href="${agent.url}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Visit Site</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Get pricing label
+        function getPricingLabel(pricingType) {
+            const labels = {
+                'free': 'Free',
+                'freemium': 'Freemium',
+                'trial': 'Free Trial',
+                'limited': 'Limited'
+            };
+            return labels[pricingType] || pricingType;
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        // Handle search
+        function handleSearch(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            applyFilters(searchTerm);
+        }
+
+        // Handle filter
+        function handleFilter() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            applyFilters(searchTerm);
+        }
+
+        // Apply all filters
+        function applyFilters(searchTerm = '') {
+            const category = document.getElementById('categoryFilter').value;
+            const pricingType = document.getElementById('pricingFilter').value;
+            
+            filteredAgents = agents.filter(agent => {
+                const matchesCategory = category === 'all' || agent.category === category;
+                const matchesPricing = pricingType === 'all' || agent.pricingType === pricingType;
+                const matchesSearch = searchTerm === '' || 
+                    agent.name.toLowerCase().includes(searchTerm) ||
+                    agent.description.toLowerCase().includes(searchTerm) ||
+                    agent.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+                
+                return matchesCategory && matchesPricing && matchesSearch;
+            });
+            
+            handleSort();
+        }
+
+        // Handle sorting
+        function handleSort() {
+            const sortBy = document.getElementById('sortBy').value;
+            
+            switch(sortBy) {
+                case 'popularity':
+                    filteredAgents.sort((a, b) => b.popularity - a.popularity);
+                    break;
+                case 'name':
+                    filteredAgents.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case 'updated':
+                    filteredAgents.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
+                    break;
+            }
+            
+            renderAllAgents();
+            updateAgentCount();
+        }
+
+        // Update agent count
+        function updateAgentCount() {
+            document.getElementById('agentCount').textContent = filteredAgents.length;
+        }
+
+        // Show agent detail modal
+        function showAgentDetail(agentId) {
+            const agent = agents.find(a => a.id === agentId);
+            if (!agent) return;
+
+            const modalContent = `
+                <h1>${agent.name}</h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">${agent.description}</p>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <span class="badge badge-${agent.pricingType}">${getPricingLabel(agent.pricingType)}</span>
+                    <span class="badge badge-category">${agent.category}</span>
+                    <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 4px 12px; border-radius: 20px; font-size: 12px;">
+                        Popularity: ${agent.popularity}/100
+                    </span>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3>Tags</h3>
+                    <div>
+                        ${agent.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+
+                <div class="agent-detail">
+                    <div class="features">
+                        <h4>✅ Features</h4>
+                        <ul>
+                            ${agent.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="limitations">
+                        <h4>⚠️ Limitations</h4>
+                        <ul>
+                            ${agent.limitations.map(limitation => `<li>${limitation}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3>💡 How to Get Started</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">
+                        ${getStartedText(agent.pricingType)}
+                    </p>
+                </div>
+
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="${agent.url}" target="_blank" rel="noopener noreferrer" class="btn">Visit Website</a>
+                </div>
+            `;
+
+            document.getElementById('modalContent').innerHTML = modalContent;
+            document.getElementById('agentModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Get started text based on pricing type
+        function getStartedText(pricingType) {
+            const texts = {
+                'free': 'This agent is completely free to use! Simply visit their website and start using it immediately. No registration or credit card required.',
+                'freemium': 'Sign up for a free account to access basic features. You can upgrade to a paid plan if you need more advanced features or higher usage limits.',
+                'trial': 'Start with a free trial to test all premium features. You\'ll need to provide payment information, but you won\'t be charged until the trial period ends.',
+                'limited': 'This service offers limited free access with certain restrictions. Perfect for trying out the service or for light usage.'
+            };
+            return texts[pricingType] || 'Visit their website to get started with this AI agent.';
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('agentModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
